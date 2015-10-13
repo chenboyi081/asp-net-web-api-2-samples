@@ -1,0 +1,16 @@
+﻿@model WebApi.Models.Credential
+<html>
+<head>
+    <title>登录</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.EditorForModel()
+            <input type="submit" value="登录" />
+        }
+    </div>
+</body>
+</html>
+

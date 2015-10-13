@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.Http.SignalR</name>
+  </assembly>
+  <members>
+    <member name="T:System.Web.Http.HubController">
+      <summary>Defines a base class for <see cref="T:System.Web.Http.ApiController" /> that exposes functionality for calling back to clients connected to a particular SignalR hub.</summary>
+    </member>
+    <member name="M:System.Web.Http.HubController.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.HubController" /> class.</summary>
+      <param name="hubName">Name of the hub as specified by the <see cref="T:Microsoft.AspNet.SignalR.Hubs.HubNameAttribute" />.</param>
+    </member>
+    <member name="P:System.Web.Http.HubController.HubContext">
+      <summary>Gets the <see cref="T:Microsoft.AspNet.SignalR.IHubContext" /> for the associated hub.</summary>
+    </member>
+    <member name="T:System.Web.Http.HubController`1">
+      <summary>Defines a base class for <see cref="T:System.Web.Http.ApiController" /> that exposes functionality for calling back to clients connected to a particular SignalR hub.</summary>
+      <typeparam name="THub">The type of the hub. Must implement the <see cref="T:Microsoft.AspNet.SignalR.Hubs.IHub" /> interface.</typeparam>
+    </member>
+    <member name="M:System.Web.Http.HubController`1.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.HubController`1" /> class.</summary>
+    </member>
+    <member name="P:System.Web.Http.HubController`1.HubContext">
+      <summary>Gets the <see cref="T:Microsoft.AspNet.SignalR.IHubContext" /> for the associated hub.</summary>
+      <returns>The <see cref="T:Microsoft.AspNet.SignalR.IHubContext" /> for the associated hub.</returns>
+    </member>
+    <member name="T:System.Web.Http.HubControllerBase">
+      <summary>Defines a base class for <see cref="T:System.Web.Http.ApiController" /> that exposes functionality for calling back to clients connected to a particular SignalR hub.</summary>
+    </member>
+    <member name="M:System.Web.Http.HubControllerBase.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Web.Http.HubControllerBase" /> class.</summary>
+    </member>
+    <member name="P:System.Web.Http.HubControllerBase.Clients"></member>
+    <member name="P:System.Web.Http.HubControllerBase.ConnectionManager"></member>
+    <member name="P:System.Web.Http.HubControllerBase.Groups"></member>
+    <member name="P:System.Web.Http.HubControllerBase.HubContext">
+      <summary>Gets the <see cref="T:Microsoft.AspNet.SignalR.IHubContext" /> for the associated hub.</summary>
+    </member>
+  </members>
+</doc>

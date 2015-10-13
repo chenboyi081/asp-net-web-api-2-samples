@@ -1,0 +1,22 @@
+﻿body
+{
+    font-size: .85em;
+    font-family: "Trebuchet MS", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+li
+{
+    list-style-type:none; 
+}
+ul
+{
+    padding:0px;
+    margin:0px;
+}
+td:nth-child(odd)
+{
+    text-align: right;
+    vertical-align: top;
+    font-weight: bold
+}

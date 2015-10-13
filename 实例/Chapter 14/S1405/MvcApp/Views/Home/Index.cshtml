@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+    <title>联系人列表</title>
+    <script type="text/javascript" src="@Url.Content("~/scripts/jquery-1.10.2.js")"></script>
+</head>
+<body>
+    <ul id="contacts"></ul>
+    <script type="text/javascript">
+        $(function ()
+        {
+            $.ajax({
+                url: 'http://localhost:3721/api/contacts',
+                type: 'GET',
+                success: listContacts,
+                beforeSend: setRequestHeader
+            });
+        });
+
+        function listContacts(contacts)
+        {
+            $.each(contacts, function (index, contact) {
+                var html = "<li><ul>";
+                html += "<li>Name: " + contact.Name + "</li>";
+                html += "<li>Phone No:" + contact.PhoneNo + "</li>";
+                html += "<li>Email Address: " + contact.EmailAddress + "</li>";
+                html += "</ul>";
+                $("#contacts").append($(html));
+            });
+        }
+
+        function setRequestHeader(xmlHttpRequest)
+        {
+            xmlHttpRequest.setRequestHeader('X-Custom-Header1', 'Foo');
+            xmlHttpRequest.setRequestHeader('X-Custom-Header2', 'Bar');
+        }
+    </script>
+</body>
+</html>
+

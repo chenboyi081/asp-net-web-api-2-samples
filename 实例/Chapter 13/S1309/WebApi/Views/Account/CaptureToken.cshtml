@@ -1,0 +1,20 @@
+﻿<html>
+    <head>
+        <title></title>
+        <script src="@Url.Content("~/scripts/jquery-1.10.2.js")"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var redirectUrl = '@ViewBag.RequestUri';
+                if (redirectUrl.indexOf('?') >= 0) {
+                    redirectUrl += "&" + location.hash.slice(1)
+                }
+                else {
+                    redirectUrl += "?" + location.hash.slice(1)
+                }
+                location.href = redirectUrl;
+            });
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

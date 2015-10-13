@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.AspNet.Mvc.Facebook</id>
+    <version>5.0.0</version>
+    <title>Microsoft ASP.NET MVC Facebook</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/aspnetcomponent_rtw_ENU.htm</licenseUrl>
+    <projectUrl>http://www.asp.net/mvc</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>This package contains everything you need to create a Facebook application using ASP.NET MVC.</description>
+    <summary>This package contains everything you need to create a Facebook application using ASP.NET MVC.</summary>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <language>en-US</language>
+    <tags>Microsoft AspNet Mvc Facebook</tags>
+    <dependencies>
+      <dependency id="Facebook" version="6.1.4" />
+      <dependency id="Microsoft.AspNet.Mvc" version="5.0.0" />
+      <dependency id="Microsoft.AspNet.Razor" version="3.0.0" />
+      <dependency id="Microsoft.AspNet.WebApi" version="5.0.0" />
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.0.0" />
+      <dependency id="Microsoft.AspNet.WebApi.Core" version="5.0.0" />
+      <dependency id="Microsoft.AspNet.WebApi.WebHost" version="5.0.0" />
+      <dependency id="Microsoft.AspNet.WebPages" version="3.0.0" />
+      <dependency id="Newtonsoft.Json" version="4.5.6" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Net.Http" targetFramework=".NETFramework4.5" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

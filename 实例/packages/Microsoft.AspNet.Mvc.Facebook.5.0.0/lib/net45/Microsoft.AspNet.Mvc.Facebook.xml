@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.AspNet.Mvc.Facebook</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.FacebookAuthorizeAttribute">
+      <summary>Restricts the access to requests with valid Facebook signed request parameter and to users that have the required permissions. This attribute can be declared on a controller, an action or both.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.FacebookAuthorizeAttribute.#ctor"></member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.FacebookAuthorizeAttribute.#ctor(System.String[])"></member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookAuthorizeAttribute.Permissions">
+      <summary>Gets the required permissions.</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration">
+      <summary>Configuration for the Facebook application.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration.#ctor"></member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration.AppId">
+      <summary>Gets or sets the App ID.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration.AppNamespace">
+      <summary>Gets or sets the App Namespace.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration.AppSecret">
+      <summary>Gets or sets the App Secret.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration.AppUrl">
+      <summary>Gets or sets the absolute URL for the Facebook App.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration.AuthorizationRedirectPath">
+      <summary>Gets or sets the URL path that the <see cref="T:Microsoft.AspNet.Mvc.Facebook.Authorization.FacebookAuthorizeFilter" /> will redirect to when the user did not grant the required permissions.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration.ClientProvider">
+      <summary>Gets or sets the <see cref="T:Microsoft.AspNet.Mvc.Facebook.Providers.IFacebookClientProvider" /> .</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration.LoadFromAppSettings">
+      <summary>Loads the configuration properties from app settings.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration.PermissionService">
+      <summary>Gets or sets the <see cref="T:Microsoft.AspNet.Mvc.Facebook.Providers.IFacebookPermissionService" /> .</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration.Properties">
+      <summary>Gets the additional properties associated with this instance.</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.FacebookConnection`1">
+      <summary>Model for the Facebook object connection.</summary>
+      <typeparam name="T">Type of the connection.</typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.FacebookConnection`1.#ctor"></member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookConnection`1.Data">
+      <summary>Gets or sets the connection data.</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.FacebookContext">
+      <summary>Provides access to Facebook-specific information.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.FacebookContext.#ctor"></member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookContext.AccessToken">
+      <summary>Gets or sets the access token.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookContext.Client">
+      <summary>Gets or sets the Facebook client.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookContext.Configuration">
+      <summary>Gets or sets the <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration" /> .</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookContext.SignedRequest">
+      <summary>Gets or sets the parsed signed request.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookContext.UserId">
+      <summary>Gets or sets the user ID.</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.FacebookFieldModifierAttribute">
+      <summary>Allows adding field modifiers when querying Facebook Graph API.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.FacebookFieldModifierAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookFieldModifierAttribute" /> class.</summary>
+      <param name="fieldModifier">The field modifier.</param>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookFieldModifierAttribute.FieldModifier">
+      <summary>Gets or sets the field modifier.</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.FacebookGroupConnection`1">
+      <summary>Model for the Facebook object connection when it contains a collection.</summary>
+      <typeparam name="T">Type of the collection element.</typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.FacebookGroupConnection`1.#ctor"></member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookGroupConnection`1.Data">
+      <summary>Gets or sets the connection data.</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.FacebookHtmlHelperExtensions">
+      <summary>Facebook-related extension methods for <see cref="T:System.Web.Mvc.HtmlHelper" /> .</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.FacebookHtmlHelperExtensions.FacebookSignedRequest(System.Web.Mvc.HtmlHelper)">
+      <summary>Returns the signed_request in a hidden input element.</summary>
+      <returns>The signed_request in a hidden input element.</returns>
+      <param name="htmlHelper">The <see cref="T:System.Web.Mvc.HtmlHelper" /> .</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.FacebookRedirectContext">
+      <summary>Provides access to the data redirected from <see cref="T:Microsoft.AspNet.Mvc.Facebook.Authorization.FacebookAuthorizeFilter" /> .</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.FacebookRedirectContext.#ctor"></member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookRedirectContext.Configuration">
+      <summary>Gets or sets the <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration" /> .</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookRedirectContext.OriginUrl">
+      <summary>Gets or sets the origin URL.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookRedirectContext.RedirectUrl">
+      <summary>Gets or sets the redirect URL.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.FacebookRedirectContext.RequiredPermissions">
+      <summary>Gets or sets the required permissions specified on <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookAuthorizeAttribute" /> .</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.GlobalFacebookConfiguration">
+      <summary>Provides a global <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration" /> for ASP.NET applications.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.GlobalFacebookConfiguration.Configuration">
+      <summary>Gets the global <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration" /> .</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.PreApplicationStartCode">
+      <summary> Code that will be executed before application start. </summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.PreApplicationStartCode.Start">
+      <summary> Starts this instance. </summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.Authorization.FacebookAuthorizeFilter">
+      <summary>Authorization filter that verifies the signed requests and permissions from Facebook.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Authorization.FacebookAuthorizeFilter.#ctor(Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Mvc.Facebook.Authorization.FacebookAuthorizeFilter" /> class.</summary>
+      <param name="config">The <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration" /> .</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Authorization.FacebookAuthorizeFilter.CreateRedirectResult(System.Uri)">
+      <summary>Called when authorization fails and need to create a redirect result.</summary>
+      <returns>The <see cref="T:System.Web.Mvc.ActionResult" /> .</returns>
+      <param name="redirectUrl">The redirect URL.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Authorization.FacebookAuthorizeFilter.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+      <summary>Called when authorization is required.</summary>
+      <param name="filterContext">The filter context.</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.Client.FacebookClientExtensions">
+      <summary>Extension methods for <see cref="T:Facebook.FacebookClient" /> .</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Client.FacebookClientExtensions.GetCurrentUserAsync``1(Facebook.FacebookClient)">
+      <summary>Gets the current user information.</summary>
+      <returns>The current user.</returns>
+      <param name="client">The client.</param>
+      <typeparam name="TUser">The type of the user.</typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Client.FacebookClientExtensions.GetCurrentUserAsync(Facebook.FacebookClient)">
+      <summary>Gets the current user information.</summary>
+      <returns>The current user.</returns>
+      <param name="client">The client.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Client.FacebookClientExtensions.GetCurrentUserFriendsAsync(Facebook.FacebookClient)">
+      <summary>Gets the current user friends information.</summary>
+      <returns>A collection of friends.</returns>
+      <param name="client">The client.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Client.FacebookClientExtensions.GetCurrentUserFriendsAsync``1(Facebook.FacebookClient)">
+      <summary>Gets the current user friends information.</summary>
+      <returns>A collection of friends.</returns>
+      <param name="client">The client.</param>
+      <typeparam name="TUserFriend">The type of the user friend.</typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Client.FacebookClientExtensions.GetCurrentUserPermissionsAsync(Facebook.FacebookClient)">
+      <summary>Gets the permissions granted by the current user.</summary>
+      <returns>A collection of permissions.</returns>
+      <param name="client">The client.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Client.FacebookClientExtensions.GetCurrentUserPhotosAsync``1(Facebook.FacebookClient)">
+      <summary>Gets the current user photos.</summary>
+      <returns>A collection of user photos.</returns>
+      <param name="client">The client.</param>
+      <typeparam name="TPhotos">The type of the photo.</typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Client.FacebookClientExtensions.GetCurrentUserStatusesAsync``1(Facebook.FacebookClient)">
+      <summary>Gets the current user statuses.</summary>
+      <returns>A collection of statuses.</returns>
+      <param name="client">The client.</param>
+      <typeparam name="TStatus">The type of the status.</typeparam>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Client.FacebookClientExtensions.GetFacebookObjectAsync(Facebook.FacebookClient,System.String)">
+      <summary>Gets the Facebook object located at a given path.</summary>
+      <returns>A Facebook object.</returns>
+      <param name="client">The client.</param>
+      <param name="objectPath">The object path.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Client.FacebookClientExtensions.GetFacebookObjectAsync``1(Facebook.FacebookClient,System.String)">
+      <summary>Gets the Facebook object located at a given path.</summary>
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+      <param name="client">The client.</param>
+      <param name="objectPath">The object path.</param>
+      <typeparam name="TFacebookObject">The type of the Facebook object.</typeparam>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.Client.FacebookQueryHelper">
+      <summary>Helper for constructing Facebook Graph API queries.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Client.FacebookQueryHelper.#ctor"></member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Client.FacebookQueryHelper.GetFields(System.Type)">
+      <summary>Gets the appropriate "fields" query parameter for the Facebook Graph API based on the public properties of the model type.</summary>
+      <returns>The "fields" query parameter.</returns>
+      <param name="modelType">Type of the model.</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.ModelBinders.FacebookContextModelBinder">
+      <summary>Model binds an action method parameter to a <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookContext" /> .</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.ModelBinders.FacebookContextModelBinder.#ctor(Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Mvc.Facebook.ModelBinders.FacebookContextModelBinder" /> class.</summary>
+      <param name="config">The <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration" /> .</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.ModelBinders.FacebookContextModelBinder.BindModel(System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext)">
+      <summary>Binds the model to a value by using the specified controller context and binding context.</summary>
+      <returns>The bound value.</returns>
+      <param name="controllerContext">The controller context.</param>
+      <param name="bindingContext">The binding context.</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.ModelBinders.FacebookRedirectContextModelBinder">
+      <summary>Model binds an action method parameter to a <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookRedirectContext" /> .</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.ModelBinders.FacebookRedirectContextModelBinder.#ctor(Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Mvc.Facebook.ModelBinders.FacebookRedirectContextModelBinder" /> class.</summary>
+      <param name="config">The <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration" /> .</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.ModelBinders.FacebookRedirectContextModelBinder.BindModel(System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext)">
+      <summary>Binds the model to a value by using the specified controller context and binding context.</summary>
+      <returns>The bound value.</returns>
+      <param name="controllerContext">The controller context.</param>
+      <param name="bindingContext">The binding context.</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.Models.ChangeEntry">
+      <summary>Change entry from Facebook as part of Realtime Updates.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Models.ChangeEntry.#ctor"></member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.Models.ChangeEntry.ChangedFields">
+      <summary>Gets or sets the changed fields.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.Models.ChangeEntry.Time">
+      <summary>Gets or sets the time.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.Models.ChangeEntry.UserId">
+      <summary>Gets or sets the user id.</summary>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.Models.ChangeNotification">
+      <summary>Notification from Facebook as part of Realtime Updates.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Models.ChangeNotification.#ctor"></member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.Models.ChangeNotification.Entry">
+      <summary>Gets or sets the change entry.</summary>
+      <returns>The change entry.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.Models.ChangeNotification.Object">
+      <summary>Gets or sets the object that has been updated.</summary>
+      <returns>The Facebook object.</returns>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.Models.SubscriptionVerification">
+      <summary>Subscription verification data from Facebook as part of Realtime Updates.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Models.SubscriptionVerification.#ctor"></member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.Models.SubscriptionVerification.Challenge">
+      <summary>Gets or sets the challenge string.</summary>
+      <returns>The challenge string.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.Models.SubscriptionVerification.Mode">
+      <summary>Gets or sets the mode.</summary>
+      <returns>The mode.</returns>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.Models.SubscriptionVerification.Verify_Token">
+      <summary>Gets or sets the verify_token.</summary>
+      <returns>The verify_token.</returns>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.Providers.DefaultFacebookClientProvider">
+      <summary>Default implementation of <see cref="T:Microsoft.AspNet.Mvc.Facebook.Providers.IFacebookClientProvider" /> .</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Providers.DefaultFacebookClientProvider.#ctor(Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Mvc.Facebook.Providers.DefaultFacebookClientProvider" /> class.</summary>
+      <param name="configuration">The <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration" /> .</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Providers.DefaultFacebookClientProvider.CreateClient">
+      <summary>Creates a <see cref="T:Facebook.FacebookClient" /> with AppId and AppSecret that uses Json.NET for serialization and deserialization.</summary>
+      <returns>The <see cref="T:Facebook.FacebookClient" /> instance.</returns>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.Providers.DefaultFacebookPermissionService">
+      <summary>Default implementation of <see cref="T:Microsoft.AspNet.Mvc.Facebook.Providers.IFacebookPermissionService" /> .</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Providers.DefaultFacebookPermissionService.#ctor(Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.AspNet.Mvc.Facebook.Providers.DefaultFacebookPermissionService" /> class.</summary>
+      <param name="configuration">The <see cref="T:Microsoft.AspNet.Mvc.Facebook.FacebookConfiguration" /> .</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Providers.DefaultFacebookPermissionService.GetUserPermissions(System.String,System.String)">
+      <summary>Gets the user permissions by calling the Facebook Graph API.</summary>
+      <returns>The user permissions.</returns>
+      <param name="userId">The user id.</param>
+      <param name="accessToken">The access token.</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.Providers.IFacebookClientProvider">
+      <summary>Provides an abstraction for creating <see cref="T:Facebook.FacebookClient" /> .</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Providers.IFacebookClientProvider.CreateClient">
+      <summary>Creates an instance of <see cref="T:Facebook.FacebookClient" /> .</summary>
+      <returns>The <see cref="T:Facebook.FacebookClient" /> instance.</returns>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.Providers.IFacebookPermissionService">
+      <summary>Provides an abstraction for retrieving the user permissions.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Providers.IFacebookPermissionService.GetUserPermissions(System.String,System.String)">
+      <summary>Gets the user permissions.</summary>
+      <returns>The user permissions.</returns>
+      <param name="userId">The user id.</param>
+      <param name="accessToken">The access token.</param>
+    </member>
+    <member name="T:Microsoft.AspNet.Mvc.Facebook.Realtime.FacebookRealtimeUpdateController">
+      <summary>
+        <see cref="T:System.Web.Http.ApiController" /> for handling Facebook Realtime Update subscriptions.</summary>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Realtime.FacebookRealtimeUpdateController.#ctor"></member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.Realtime.FacebookRealtimeUpdateController.FacebookConfiguration">
+      <summary>Gets or sets the <see cref="P:Microsoft.AspNet.Mvc.Facebook.Realtime.FacebookRealtimeUpdateController.FacebookConfiguration" /> .</summary>
+      <returns>The <see cref="P:Microsoft.AspNet.Mvc.Facebook.Realtime.FacebookRealtimeUpdateController.FacebookConfiguration" /> .</returns>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Realtime.FacebookRealtimeUpdateController.Get(Microsoft.AspNet.Mvc.Facebook.Models.SubscriptionVerification)">
+      <summary>Handles the HTTP GET requests from Facebook for subscription verification.</summary>
+      <param name="subscriptionVerification">The subscription verification.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Realtime.FacebookRealtimeUpdateController.HandleUpdateAsync(Microsoft.AspNet.Mvc.Facebook.Models.ChangeNotification)">
+      <summary>Handles the update.</summary>
+      <param name="notification">The notification.</param>
+    </member>
+    <member name="M:Microsoft.AspNet.Mvc.Facebook.Realtime.FacebookRealtimeUpdateController.Post">
+      <summary>Handles the HTTP POST requests from Facebook for updates.</summary>
+    </member>
+    <member name="P:Microsoft.AspNet.Mvc.Facebook.Realtime.FacebookRealtimeUpdateController.VerifyToken">
+      <summary>Gets the verify token.</summary>
+      <returns>The verify token.</returns>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,26 @@
+﻿@model WebApi.Contact
+<html>
+<head>
+    <title>向Web API提交标单</title>
+    <script src="@Url.Content("~/Scripts/jquery-1.10.2.js")"></script>
+    <script>
+        $(function () {
+            $("form").submit(function () {
+                $.ajax({
+                    url: "http://localhost:3721/api/contacts",
+                    type: "POST",
+                    contentType: "application/x-www-form-urlencoded",
+                    data: $("form").serialize()
+                });
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        @Html.EditorForModel()
+        <input type="submit" value="Save" />
+    </form>
+</body>
+</html>

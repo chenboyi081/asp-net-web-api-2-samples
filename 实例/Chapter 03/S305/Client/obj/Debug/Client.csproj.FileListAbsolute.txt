@@ -1,0 +1,8 @@
+C:\Users\Administrator\Desktop\Git\asp-net-web-api-2-samples\实例\Chapter 03\S305\Client\bin\Debug\Client.exe.config
+C:\Users\Administrator\Desktop\Git\asp-net-web-api-2-samples\实例\Chapter 03\S305\Client\bin\Debug\Client.exe
+C:\Users\Administrator\Desktop\Git\asp-net-web-api-2-samples\实例\Chapter 03\S305\Client\bin\Debug\Client.pdb
+C:\Users\Administrator\Desktop\Git\asp-net-web-api-2-samples\实例\Chapter 03\S305\Client\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Administrator\Desktop\Git\asp-net-web-api-2-samples\实例\Chapter 03\S305\Client\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Administrator\Desktop\Git\asp-net-web-api-2-samples\实例\Chapter 03\S305\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\Git\asp-net-web-api-2-samples\实例\Chapter 03\S305\Client\obj\Debug\Client.exe
+C:\Users\Administrator\Desktop\Git\asp-net-web-api-2-samples\实例\Chapter 03\S305\Client\obj\Debug\Client.pdb

@@ -20,7 +20,7 @@ namespace WebApi
             Binding binding = new HttpBinding();
 
             //创建、开启信道监听器
-            IChannelListener<IReplyChannel> channelListener = binding.BuildChannelListener<IReplyChannel>(listenUri);
+            IChannelListener<IReplyChannel> channelListener = binding.BuildChannelListener<IReplyChannel>(listenUri);   //调用BuildChannelListener<IReplyChannel>方法创建一个channelListener管道
             channelListener.Open();
 
             //创建、开启回复信道

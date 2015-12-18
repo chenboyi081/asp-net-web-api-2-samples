@@ -19,7 +19,7 @@ namespace WebApi.Controllers
             HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, "http://www.artech.com/wheather/010/2");
             MyHttpRoutingDispatcher dispatcher =
                 new MyHttpRoutingDispatcher(configuration);
-            await dispatcher.SendAsync(request, CancellationToken.None);
+            await dispatcher.SendAsync(request, CancellationToken.None);        //await方法等待异步方法SendAsync执行结束
             IHttpRouteData routeData = request.GetRouteData();
             return routeData.Values;
         }

@@ -21,7 +21,7 @@
 请求头自定义“X-HTTP-Method-Override”，覆盖或者重写请求自身的HTTP方法,实现PUT和Delete的支持。
 ![](http://images.cnblogs.com/cnblogs_com/chenboyi081/764976/o_S305.png)
 ###S306 直接利用HttpBinding进行请求的接收和响应
-Uri listenUri = new Uri("http://127.0.0.1:3721");
+			Uri listenUri = new Uri("http://127.0.0.1:3721");
             Binding binding = new HttpBinding();
 
             //创建、开启信道监听器
@@ -46,17 +46,18 @@ Uri listenUri = new Uri("http://127.0.0.1:3721");
 ###S307 创建自定义HttpServer模拟HttpSelfHostServer的工作原理
 自定义一个MyHttpSelfHostServer继承自HttpServer用以模拟HttpSelfHostServer的工作原理。
 Main函数中的代码：
-    static void Main(string[] args)
-    {
-    using (MyHttpSelfHostServer httpServer = new MyHttpSelfHostServer(new HttpConfiguration(), new Uri("http://127.0.0.1:3721")))
-    {
-    httpServer.Configuration.Routes.MapHttpRoute(
-    name: "DefaultApi",
-    routeTemplate: "api/{controller}/{id}",
-    defaults: new { id = RouteParameter.Optional });
-    
-    httpServer.Open();
-    Console.Read();
-    }
-    } 
+
+    	static void Main(string[] args)
+	    {
+	    using (MyHttpSelfHostServer httpServer = new MyHttpSelfHostServer(new HttpConfiguration(), new Uri("http://127.0.0.1:3721")))
+	    {
+	    httpServer.Configuration.Routes.MapHttpRoute(
+	    name: "DefaultApi",
+	    routeTemplate: "api/{controller}/{id}",
+	    defaults: new { id = RouteParameter.Optional });
+	    
+	    httpServer.Open();
+	    Console.Read();
+	    }
+	    } 
 ![s307](http://images.cnblogs.com/cnblogs_com/chenboyi081/764976/o_S307.png)
